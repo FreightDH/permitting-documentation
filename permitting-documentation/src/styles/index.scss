@@ -97,17 +97,18 @@ body {
   width: 100%;
   min-height: 100%;
   overflow: hidden;
-  // Прижимаем footer
+
   display: flex;
   flex-direction: column;
-  > main {
-    flex: 1 1 auto;
+}
 
-    section {
-      padding: 75px 0;
-      @include adaptiveValue('padding-top', 75, 50);
-      @include adaptiveValue('padding-bottom', 75, 50);
-    }
+main {
+  flex: 1 1 auto;
+
+  section {
+    padding: 75px 0;
+    @include adaptiveValue('padding-top', 75, 50);
+    @include adaptiveValue('padding-bottom', 75, 50);
   }
 }
 //</ОБОЛОЧКА>

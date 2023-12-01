@@ -1,3 +1,3 @@
+import Description from './Description/Description';
 import Intro from './Intro/Intro';
-
-export { Intro };
+export { Description, Intro };

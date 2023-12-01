@@ -1,0 +1,19 @@
+@import 'styles';
+
+.description {
+  background-color: #fff;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__text {
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 16);
+    font-weight: 300;
+    line-height: 125%;
+    text-align: center;
+  }
+}

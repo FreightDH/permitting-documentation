@@ -1,13 +1,11 @@
-import { Intro } from 'sections';
-import cl from './App.module.scss';
+import { Description, Intro } from 'sections';
 
 const App = () => {
   return (
-    <>
-      <main className={cl.page}>
-        <Intro />
-      </main>
-    </>
+    <main>
+      <Intro />
+      <Description />
+    </main>
   );
 };
 
