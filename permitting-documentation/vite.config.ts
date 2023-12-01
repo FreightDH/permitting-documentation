@@ -8,8 +8,9 @@ export default defineConfig({
     alias: {
       app: '/src/app',
       components: '/src/components',
-      widgets: '/src/widgets',
+      sections: '/src/widgets',
       styles: '/src/styles',
+      assets: '/src/assets',
     },
   },
 });
