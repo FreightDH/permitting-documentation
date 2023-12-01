@@ -1,10 +1,11 @@
-import { Description, Intro } from 'sections';
+import { Description, Intro, Stages } from 'sections';
 
 const App = () => {
   return (
     <main>
       <Intro />
       <Description />
+      <Stages />
     </main>
   );
 };

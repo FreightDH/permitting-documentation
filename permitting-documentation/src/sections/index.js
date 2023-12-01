@@ -1,3 +1,5 @@
 import Description from './Description/Description';
 import Intro from './Intro/Intro';
-export { Description, Intro };
+import Stages from './Stages/Stages';
+
+export { Description, Intro, Stages };
