@@ -107,8 +107,8 @@ main {
 
   section {
     padding: 75px 0;
-    @include adaptiveValue('padding-top', 75, 50);
-    @include adaptiveValue('padding-bottom', 75, 50);
+    @include adaptiveValue('padding-top', 75, 40);
+    @include adaptiveValue('padding-bottom', 75, 40);
   }
 }
 //</ОБОЛОЧКА>

@@ -21,6 +21,7 @@
 
   &__text {
     padding: 0px 0px 0px 15px;
+    @include adaptiveValue('padding-left', 15, 12);
     position: relative;
 
     font-size: 15px;
