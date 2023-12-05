@@ -1,0 +1,49 @@
+@import 'styles';
+
+.services {
+  background-color: #ebeff3;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    @include adaptiveValue('gap', 40, 20);
+  }
+
+  &__title {
+    font-size: 40px;
+    @include adaptiveValue('font-size', 40, 19);
+    line-height: 115%;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__item {
+    padding: 0px 0px 0px 12px;
+    @include adaptiveValue('padding-left', 12, 8);
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 14);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      @include adaptiveValue('width', 7, 5);
+      height: 7px;
+      @include adaptiveValue('height', 7, 5);
+      top: 5px;
+      left: 0;
+      background-color: #353535;
+      border-radius: 50%;
+    }
+  }
+}
