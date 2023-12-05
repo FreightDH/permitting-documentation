@@ -1,4 +1,4 @@
-import { Stage } from 'components';
+import { Stage } from 'shared';
 import stagesInfo from './stagesInfo';
 import cl from './Stages.module.scss';
 

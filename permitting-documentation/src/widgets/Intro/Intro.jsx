@@ -1,4 +1,4 @@
-import { Arrows } from 'components';
+import { Arrows } from 'shared';
 import { bg } from 'assets';
 import cl from './Intro.module.scss';
 
@@ -11,7 +11,7 @@ const Intro = () => {
           <p className={cl.intro__text}>
             Разработка разрешающей документации на применение продукции иностранного производства
           </p>
-          <a href="#" className={cl.intro__button}>
+          <a href="#request" className={cl.intro__button}>
             Оставить заявку
           </a>
         </div>
