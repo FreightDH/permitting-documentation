@@ -1,4 +1,4 @@
-import { Description, Intro, Services, Stages } from 'sections';
+import { Description, Intro, Request, Services, Stages } from 'widgets';
 
 const App = () => {
   return (
@@ -7,6 +7,7 @@ const App = () => {
       <Description />
       <Services />
       <Stages />
+      <Request />
     </main>
   );
 };
