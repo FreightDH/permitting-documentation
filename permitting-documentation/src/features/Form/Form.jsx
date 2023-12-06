@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CustomInput, isEmpty } from 'shared';
 import cl from './Form.module.scss';
@@ -6,23 +7,41 @@ const Form = () => {
   const {
     register,
     formState: { errors },
-    handleSubmit,
     reset,
   } = useForm({ mode: 'onBlur' });
 
-  const onSubmit = (event) => {
-    event.preventDefault;
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [tel, setTel] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData(event.target);
+
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    };
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
     reset();
   };
 
   return (
-    <form action="#" onSubmit={handleSubmit(onSubmit)} className={cl.form}>
+    <form action="#" onSubmit={(event) => handleSubmit(event)} className={cl.form}>
       <CustomInput
         label="Название компании / Имя"
         type="text"
-        name="company"
-        // value={email}
-        // onChange={handleEmailChange}
+        name="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
         register={register}
         errors={errors}
         validationSchema={{
@@ -34,9 +53,9 @@ const Form = () => {
       <CustomInput
         label="Адрес электронной почты"
         type="email"
-        name="email"
-        // value={email}
-        // onChange={handleEmailChange}
+        name="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         register={register}
         errors={errors}
         validationSchema={{
@@ -47,16 +66,21 @@ const Form = () => {
       <CustomInput
         label="Контактный номер телефона"
         type="tel"
-        name="phone"
-        // value={email}
-        // onChange={handleEmailChange}
+        name="Phone"
+        value={tel}
+        onChange={(e) => setTel(e.target.value)}
         register={register}
         errors={errors}
-        validationSchema={{}}
       />
       <div className={cl.form__item}>
         <label className={cl.form__label}>Название проекта / Краткое ТЗ</label>
-        <textarea rows="10" className={cl.form__textarea}></textarea>
+        <textarea
+          rows="10"
+          name="Description"
+          value={description}
+          className={cl.form__textarea}
+          onChange={(e) => setDescription(e.target.value)}
+        ></textarea>
       </div>
       <button className={cl.form__button}>Оставить заявку</button>
     </form>

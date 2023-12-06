@@ -10,6 +10,7 @@ const CustomInput = ({
   register,
   errors,
   validationSchema,
+  mask,
 }) => {
   const inputClasses = [cl.input__input];
   if (errors[name]) inputClasses.push(cl.err);
