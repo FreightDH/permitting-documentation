@@ -1,14 +1,17 @@
-import { Description, Intro, Request, Services, Stages } from 'widgets';
+import { Description, Footer, Intro, Request, Services, Stages } from 'widgets';
 
 const App = () => {
   return (
-    <main>
-      <Intro />
-      <Description />
-      <Services />
-      <Stages />
-      <Request />
-    </main>
+    <>
+      <main>
+        <Intro />
+        <Description />
+        <Services />
+        <Stages />
+        <Request />
+      </main>
+      <Footer />
+    </>
   );
 };
 

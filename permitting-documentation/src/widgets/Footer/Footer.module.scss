@@ -1,0 +1,71 @@
+@import 'styles';
+
+.footer {
+  padding: 30px 0 20px 0;
+  @include adaptiveValue('padding-top', 30, 15);
+  @include adaptiveValue('padding-bottom', 20, 10);
+  background-color: #495057;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    @include adaptiveValue('gap', 30, 25);
+
+    color: #eee;
+    text-align: center;
+    @include adaptiveValue('font-size', 16, 14);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__copyright {
+    font-weight: 300;
+    font-size: 14px;
+    @include adaptiveValue('font-size', 14, 12);
+  }
+}
+
+.list {
+  &__item {
+    font-weight: 300;
+
+    a {
+      font-weight: 500;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1.5px;
+        bottom: -1px;
+        left: 50%;
+        background-color: #fff;
+        transition: all 0.3s ease 0s;
+      }
+
+      @media (min-width: 768px) {
+        &:hover {
+          &::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
