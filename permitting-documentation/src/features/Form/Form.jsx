@@ -30,7 +30,7 @@ const Form = () => {
 
     xhr.open('POST', 'mail.php', true);
     xhr.send(formData);
-
+    alert('Заявка успешно отправлена!');
     reset();
   };
 

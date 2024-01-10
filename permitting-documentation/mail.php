@@ -28,12 +28,12 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'zolotkovmax@gmail.com'; // Логин на почте
-  $mail->Password   = 'ebvh icou kiyq bvai'; // Пароль на почте
+  $mail->Username   = 'ekb.ip.data@gmail.com'; // Логин на почте
+  $mail->Password   = $_ENV['SMTP_PASSWORD']; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('Max Zolotkov', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('EKB_IP', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('maxzolotkov@yandex.ru');
