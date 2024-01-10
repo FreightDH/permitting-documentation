@@ -7,4 +7,4 @@
 - JavaScript
 - PHP
 
-### Deploy: [link](https://freightdh.github.io/permitting-documentation/)
+### Deploy: [link](https://permitting-documentation.ru/)
